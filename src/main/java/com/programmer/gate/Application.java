@@ -2,6 +2,7 @@ package com.programmer.gate;
 
 import java.util.List;
 
+import com.programmer.gate.service.SoccerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,7 +22,12 @@ public class Application implements CommandLineRunner{
 	
 	@Override
 	public void run(String... arg0) throws Exception {
-		
+
+		soccerService.addUser("Mickey", 95);
+		soccerService.addUser("Donald", 91);
+		soccerService.addUser("Minnie", 87);
+
+/*
 		soccerService.addBarcelonaPlayer("Xavi Hernandez", "Midfielder", 6);
 		
 		List<String> players = soccerService.getAllTeamPlayers(1);
@@ -29,5 +35,6 @@ public class Application implements CommandLineRunner{
 		{
 			System.out.println("Introducing Barca player => " + player);
 		}
+*/
 	}
 }

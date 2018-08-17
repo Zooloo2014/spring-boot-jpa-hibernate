@@ -14,8 +14,11 @@ import javax.persistence.SequenceGenerator;
 public class Player {
 
 	@Id
+/*
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "player_Sequence")
 	@SequenceGenerator(name = "player_Sequence", sequenceName = "PLAYER_SEQ")
+*/
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "name")
